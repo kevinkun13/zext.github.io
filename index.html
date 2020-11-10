@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="todo-title">Todo</h1>
+    <div class="box">
+        <div class="input-btn-group">
+            <input type="text" id="todo-input"/>
+            <button class="add-btn" id="add">Create</button>
+        </div>
+    </div>
+    <div class="box" id="todo-list">
+            <span class="none" id="no-data">
+                There is no data to be displayed
+            </span>
+        <div class="card">
+            <div class="input-inline">
+                <div class="content">
+                    <!-- <input type="checkbox" id="check" onclick="todoTemplate.onCheckTodo(event.target)"/>-->
+                    <select name="status" id="todo-status" onclick="todoTemplate.onSelectTodo(event)">
+                        <option selected disabled>Choose Status</option>
+                        <option value="100">Processing</option>
+                        <option value="500">Pending</option>
+                        <option value="300">Complete</option>
+                    </select>
+                    <p class="description">Learn PHP</p>
+                    <input type="text" id="edit-todo-input" hidden/>
+                </div>
+                <div class="btn-group">
+                    <div class="btn-group none">
+                        <button class="cancel-btn" id="cancel" onclick="todoTemplate.onCancelTodo(event.target)">Cancel</button>
+                        <button class="change-btn" id="change" onclick="todoTemplate.onChangeTodo(event.target)">Change</button>
+                    </div>
+                    <button class="edit-btn" id="edit" onclick="todoTemplate.onEditTodo(event.target)">Edit</button>
+                    <button class="del-btn" id="delete" onclick="todoTemplate.onRemoveTodo(event.target)">Delete</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
